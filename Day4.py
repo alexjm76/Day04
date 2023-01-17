@@ -1,13 +1,12 @@
-#list comprehension
+#7.4
+things = ["mozzarella" , "ciderella", "salmonella"]
 
-# odd_lists=[]
-# for i in range(1,11):
-#     if i % 2==1:
-#         odd_lists.append(1)
-# print(odd_lists)''
+print(things[1].title())
 
-odd_lists=[i for i in range(1,11) if i % 2 ==1]
-for i in range(1,11):
-    if i % 2==1:
-        odd_lists.append(1)
-print(odd_lists)
+things[0] = things[0].upper()
+
+print(things)
+
+print(f"{things.pop()}")
+print(things)
+
