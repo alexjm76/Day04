@@ -1,24 +1,31 @@
 #list
-big_bang = ["GD","태양","탑","대성","승리"]
-exo=["백현","첸"]
-exo[1]="시우민"
-big_bang.append("윤정무")
-big_bang.insert(1, "정도윤")
-# print(big_bang)
-# exo.extend(big_bang) #exo = exo + big_bang 이랑 같은 것이다.
-print(exo)
-exo.append(big_bang)
-print(exo)
-print(exo[-1][2])
-#print(exo.pop())
-print(exo[2].pop()) #pop에 지정안하면 제일 뒤에꺼 날라감
-print(exo)   #빅뱅이 날라감
-print(exo[2].pop(-2))
-print(exo)
-del exo[2][-1]
-print(exo)
-#exo.remove("탑")#탑은 리스트에 없다 리스트에는 백현 시우민 리스트 이렇게 3개인것
-exo[2].remove("탑")
-print(exo)
-exo.clear()  #다 지운다.
-print(exo)
+import copy
+
+# primes = [2,19,3,5,7,11]
+# primes_sorted = sorted(primes) #원본이 안바뀌고 새로운 변수 지정
+# print(primes)
+# print(primes_sorted)
+#
+# primes.sort() #원본이바뀐다.
+# print(primes)
+
+# mixed = [6, 4, 5, "A", 7 , "트와이스", "B", "b", "마마무"]
+# mixed.sort()
+# print(mixed) #int와 str가 같이 있어서 5,9안된다.
+
+a = [1,2,[8,9,5]]
+b = a.copy()
+c = list(a)
+d = a[:]
+a[2][1] = 7 #mutable, b/c/d affects
+print(a, b,c,d)
+
+
+
+
+a = [1,2,[8,9,5]]
+b = a.copy()
+c = list(a)
+d = a[:]
+a[2][1] = 7 #mutable, b/c/d affects
+print(a, b,c,d)
