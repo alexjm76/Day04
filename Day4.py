@@ -13,7 +13,6 @@ while True:
     alcohol = input(f"술을 선택하세요 1) {alcohol_list[0]} 2){alcohol_list[1]} 3){alcohol_list[2]} 4){alcohol_list[3]} 5) 랜덤")
     if alcohol == "6":
         print("다음에 또 오세요")
-        break
     elif alcohol == "1":
         print(f"{alcohol_list[0]}에 어울리는 안주는 {alcohol_foods[alcohol_list[0]]}입니다")
         break
@@ -27,7 +26,8 @@ while True:
         print(f"{alcohol_list[3]}에 어울리는 안주는 {alcohol_foods[alcohol_list[3]]}입니다")
         break
     elif alcohol == "5" :
-        print(f"{alcohol_list[random.randint(0,4)]}에 어울리는 안주는 {alcohol_foods[alcohol_list[random.randint(0,4)]]}입니다")
+        random_var = random.randint(0,4)
+        print(f"{alcohol_list[random_var]}에 어울리는 안주는 {alcohol_foods[alcohol_list[random_var]]}입니다")
         break
     # elif alcohol == "5":
     #     print(f"{random.choice(alcohol_list)}에 어울리는 안주는 {random.choice(alcohol_foods)}입니다")  이것도 가능
